@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0c10;
+  --surface: #14161d;
+  --surface-2: #1b1e27;
+  --border: #272b36;
+  --text: #e8eaf0;
+  --text-muted: #9aa0ad;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(
+      1200px 600px at 80% -10%,
+      rgba(99, 102, 241, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at -10% 10%,
+      rgba(168, 85, 247, 0.1),
+      transparent 55%
+    ),
+    var(--background);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Checkerboard used behind transparent canvas areas. */
+.checkerboard {
+  background-color: #2a2d37;
+  background-image:
+    linear-gradient(45deg, #20232b 25%, transparent 25%),
+    linear-gradient(-45deg, #20232b 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #20232b 75%),
+    linear-gradient(-45deg, transparent 75%, #20232b 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Thin custom scrollbars for the control panel. */
+.scroll-slim::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-slim::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+.scroll-slim::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--surface-2);
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: var(--accent);
+  border: 2px solid #0b0c10;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: var(--accent-hover);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: var(--accent);
+  border: 2px solid #0b0c10;
+  cursor: pointer;
+}
