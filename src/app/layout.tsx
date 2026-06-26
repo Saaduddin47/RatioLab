@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Reframe — Aspect Ratio Studio",
+  title: "RatioLab — Aspect Ratio Studio",
   description:
     "Convert images between aspect ratios without losing quality. Reposition, scale, and export lossless PNG or high-quality JPEG.",
 };

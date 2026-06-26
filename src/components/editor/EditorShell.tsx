@@ -110,7 +110,7 @@ function Header({ hasImage }: { hasImage: boolean }) {
           </svg>
         </div>
         <div className="min-w-0 leading-tight">
-          <p className="truncate text-sm font-semibold text-text">Reframe</p>
+          <p className="truncate text-sm font-semibold text-text">RatioLab</p>
           <p className="hidden truncate text-[11px] text-text-muted sm:block">
             Aspect Ratio Studio
           </p>

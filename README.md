@@ -1,4 +1,4 @@
-# Reframe — Aspect Ratio Studio
+# RatioLab — Aspect Ratio Studio
 
 A modern, responsive web app that converts images between aspect ratios **without reducing quality, compressing, stretching, or cropping** the original. The image is placed on a new canvas matching your chosen aspect ratio, and you reposition and scale it manually.
 
