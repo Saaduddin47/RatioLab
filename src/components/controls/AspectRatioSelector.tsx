@@ -64,7 +64,7 @@ export function AspectRatioSelector() {
         </button>
       </div>
 
-      <div className="mt-3 flex items-center gap-2">
+      <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-2">
         <NumberField
           label="W"
           value={customW}

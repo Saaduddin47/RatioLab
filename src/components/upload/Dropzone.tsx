@@ -62,10 +62,11 @@ export function Dropzone({ onImage, compact = false }: DropzoneProps) {
       <>
         <button
           onClick={() => inputRef.current?.click()}
+          aria-label="Replace image"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-text transition-colors hover:bg-[#232733]"
         >
           <UploadIcon className="h-4 w-4" />
-          Replace image
+          <span className="hidden sm:inline">Replace image</span>
         </button>
         <input
           ref={inputRef}
@@ -95,7 +96,7 @@ export function Dropzone({ onImage, compact = false }: DropzoneProps) {
         onDrop={onDrop}
         className={cn(
           "group relative flex cursor-pointer flex-col items-center justify-center",
-          "rounded-3xl border-2 border-dashed px-8 py-16 text-center transition-all",
+          "rounded-3xl border-2 border-dashed px-5 py-12 text-center transition-all sm:px-8 sm:py-16",
           dragging
             ? "border-accent bg-accent/10 scale-[1.01]"
             : "border-border bg-surface/60 hover:border-accent/60 hover:bg-surface",
